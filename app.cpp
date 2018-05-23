@@ -172,6 +172,8 @@ int neuralMachine(char grid[3][3]){
     int choice;
     if(grid[0][0] == 'X' && grid[0][2] == 'X' && !(grid[0][1] == 'O') && !(grid[0][1] == 'X')){
         choice = 2;
+    }else if(grid[0][1] == 'X' && grid[0][2] == 'X' && !(grid[0][0] == 'O') && !(grid[0][0] == 'X')){
+        choice = 1;
     }else if(grid[0][0] == 'X' && grid[0][1] == 'X' && !(grid[0][2] == 'O') && !(grid[0][2] == 'X')){
         choice = 3;
     }else if(grid[0][0] == 'X' && grid[2][0] == 'X' && !(grid[1][0] == 'O') && !(grid[0][1] == 'X')){
@@ -188,6 +190,8 @@ int neuralMachine(char grid[3][3]){
         choice = 6;
     }else if(grid[0][2] == 'X' && grid[2][2] == 'X' && !(grid[1][2] == 'O') && !(grid[1][2] == 'X')){
         choice = 6;
+    }else if(grid[0][0] == 'X' && grid[1][0] == 'X' && !(grid[2][0] == 'O') && !(grid[2][0] == 'X')){
+        choice = 7;
     }else if(grid[0][2] == 'X' && grid[1][1] == 'X' && !(grid[2][0] == 'O') && !(grid[2][0] == 'X')){
         choice = 7;
     }else if(grid[2][1] == 'X' && grid[2][2] == 'X' && !(grid[2][0] == 'O') && !(grid[2][0] == 'X')){
@@ -195,6 +199,8 @@ int neuralMachine(char grid[3][3]){
     }else if(grid[2][0] == 'X' && grid[0][2] == 'X' && !(grid[1][1] == 'O') && !(grid[2][1] == 'X')){
         choice = 5;
     }else if(grid[0][0] == 'X' && grid[1][1] == 'X' && !(grid[2][2] == 'O') && !(grid[2][2] == 'X')){
+        choice = 9;
+    }else if(grid[0][2] == 'X' && grid[1][2] == 'X' && !(grid[2][2] == 'O') && !(grid[2][2] == 'X')){
         choice = 9;
     }else{
         choice = 1 + rand() % 9;
