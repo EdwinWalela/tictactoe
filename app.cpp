@@ -1,7 +1,6 @@
 #include<iostream>
 #include<stdlib.h>
 #include<time.h>
-#include<windows.h>
 using namespace std;
 
 //Function Prototypes
